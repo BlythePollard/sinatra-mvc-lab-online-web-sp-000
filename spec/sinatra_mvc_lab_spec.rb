@@ -23,7 +23,7 @@ describe "Pig Latinizer App" do
     end
 
     it "renders the input field for the phrase" do
-      expect(last_response.body).to include("user_phrase")
+      expect(last_response.body).to include("text")
     end
 
   end

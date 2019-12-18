@@ -12,17 +12,17 @@ class PigLatinizer
 
     def pig_latinize_word(text)
         #first_letter = text.split('')[0]
-        if ["a", "e", "i", "o", "u", "h"].include?(text.split('')[0])
+        if ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U", "H"].include?(text.split('')[0])
             "#{text}way"
         else 
             #second_letter = text.split('')[1]
             #third_letter = text.split('')[2]
             #fourth_letter = text.split('')[3]
-            if ["a", "e", "i", "o", "u", "h", "y"].include?(text.split('')[1])
+            if ["a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "H", "Y"].include?(text.split('')[1])
                 "#{text[1..-1]}#{text.split('')[0]}ay"
-            elsif ["a", "e", "i", "o", "u", "h", "y"].include?(text.split('')[2])
+            elsif ["a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "H", "Y"].include?(text.split('')[2])
                 "#{text[2..-1]}#{text.split('')[0]}#{text.split('')[1]}ay" 
-            elsif ["a", "e", "i", "o", "u", "h", "y"].include?(text.split('')[3])
+            elsif ["a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "H", "Y"].include?(text.split('')[3])
                 "#{text[3..-1]}#{text.split('')[0]}#{text.split('')[1]}#{text.split('')[2]}ay"
             end
         end

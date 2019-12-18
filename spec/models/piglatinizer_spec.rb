@@ -7,20 +7,20 @@ describe 'class PigLatinizer' do
   end
 
   it 'piglatinizes an individual word' do
-    expect(words.piglatinize("pork")).to eq("orkpay")
-    expect(words.piglatinize("I")).to eq("Iway")
-    expect(words.piglatinize("hello")).to eq("ellohay")
-    expect(words.piglatinize("please")).to eq("easeplay")
-    expect(words.piglatinize("tomorrow")).to eq("omorrowtay")
-    expect(words.piglatinize("until")).to eq("untilway")
-    expect(words.piglatinize("this")).to eq("isthay")
-    expect(words.piglatinize("Enumeration")).to eq("Enumerationway")
-    expect(words.piglatinize("spray")).to eq("ayspray")
-    expect(words.piglatinize("prays")).to eq("ayspray")
+    expect(words.pig_latinize_word("pork")).to eq("orkpay")
+    expect(words.pig_latinize_word("I")).to eq("Iway")
+    expect(words.pig_latinize_word("hello")).to eq("ellohay")
+    expect(words.pig_latinize_word("please")).to eq("easeplay")
+    expect(words.pig_latinize_word("tomorrow")).to eq("omorrowtay")
+    expect(words.pig_latinize_word("until")).to eq("untilway")
+    expect(words.pig_latinize_word("this")).to eq("isthay")
+    expect(words.pig_latinize_word("Enumeration")).to eq("Enumerationway")
+    expect(words.pig_latinize_word("spray")).to eq("ayspray")
+    expect(words.pig_latinize_word("prays")).to eq("ayspray")
   end
 
   it 'has a method splits the sentence to piglatinize each word' do
-    expect(words.piglatinize("i love programming")).to eq("iway ovelay ogrammingpray")
+    expect(words.pig_latinize_string("i love programming")).to eq("iway ovelay ogrammingpray")
   end
 
 end
